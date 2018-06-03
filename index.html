@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hello from DoSelect!</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <section>
+    <!--
+      Toolbar:
+        This section stores the various functionality for our editor
+        every command to be executed will be in Anchor Tag, and will have
+        an attribute called `data-command` which will signifiy what it does
+
+        Any additional value, if required will be provided through data-value
+      
+      All the toolbar is grouped using toolbar-group. This is does to make 
+      things look visually different.
+     -->
+    <div class="toolbar">
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='undo'>
+          <i class="fas fa-undo"></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='redo'>
+          <i class='fas fa-redo'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <div class="fore-wrapper toolbar-btn">
+          <i class='fas fa-font' style='color:#C96;'></i>
+          <div class="fore-palette" id="forePalette">
+          </div>
+        </div>
+        <div class="back-wrapper toolbar-btn">
+          <i class='fas fa-font' style='background:#C96;'></i>
+          <div class="back-palette" id="backPalette">
+          </div>
+        </div>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='bold'>
+          <i class='fas fa-bold'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='italic'>
+          <i class='fas fa-italic'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='underline'>
+          <i class='fas fa-underline'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='strikeThrough'>
+          <i class='fas fa-strikethrough'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='justifyLeft'>
+          <i class='fas fa-align-left'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='justifyCenter'>
+          <i class='fas fa-align-center'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='justifyRight'>
+          <i class='fas fa-align-right'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='justifyFull'>
+          <i class='fas fa-align-justify'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='indent'>
+          <i class='fas fa-indent'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='outdent'>
+          <i class='fas fa-outdent'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='insertUnorderedList'>
+          <i class='fas fa-list-ul'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='insertOrderedList'>
+          <i class='fas fa-list-ol'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='h1'>
+          <i class="fas fa-heading"></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='h2'>H2</a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='createlink'>
+          <i class='fas fa-link'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='unlink'>
+          <i class='fas fa-unlink'></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='insertimage'>
+          <i class='fas fa-image'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='p'>
+          <i class="fas fa-paragraph"></i>
+        </a>
+      </span>
+      <span class="toolbar-group">
+        <a class="toolbar-btn" href="#" data-command='subscript'>
+          <i class='fas fa-subscript'></i>
+        </a>
+        <a class="toolbar-btn" href="#" data-command='superscript'>
+          <i class='fas fa-superscript'></i>
+        </a>
+      </span>
+    </div>
+    <!-- The Actual editor Place where user will put their content -->
+    <div id='editor' contenteditable>
+      <h1>A WYSIWYG Editor.</h1>
+      <p>Try making some changes here. Add your own text or maybe an image.</p>
+    </div>
+  </section>
+
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
